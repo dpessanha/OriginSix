@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- STYLES -->
     <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,13 +19,27 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./assets/fonts/style.css" />
+    <!-- /FONTS -->
     <title>OriginSix</title>
   </head>
   <body>
     <header id="header">
-      <nav class="container">
+      <nav class="container show">
         <a class="logo" href="#">beauty<span>salon</span>.</a>
-        <div class="menu">...</div>
+        <!-- menu -->
+        <div class="menu">
+          <ul class="grid">
+            <li><a class="title" href="#home">Início</a></li>
+            <li><a class="title" href="#about">Sobre</a></li>
+            <li><a class="title" href="#services">Serviços</a></li>
+            <li><a class="title" href="#testimonials">Depoimentos</a></li>
+            <li><a class="title" href="#contact">Contato</a></li>
+          </ul>
+        </div>
+        <!-- /menu -->
+        <div class="icon-menu toggle"></div>
+        <div class="icon-close toggle"></div>
       </nav>
     </header>
     <main>
@@ -31,7 +49,7 @@
             <img src="./pictures/hairdresser.jpg" alt="hairdresser image" />
           </div>
           <div class="text">
-            <h1>Saúde natural para os seus cabelos</h1>
+            <h2 class="title">Saúde natural para os seus cabelos</h2>
             <p>
               Um salão exclusivo em São Paulo, especializado em tratamentos
               naturais.
@@ -40,12 +58,37 @@
         </div>
       </section>
       <div class="divider-1"></div>
-      <section class="section">
+      <!-- EMMET= section.section#about>.container>.grid -->
+      <section class="section" id="about">
+        <div class="container grid">
+          <div class="image"></div>
+          <div class="text">
+            <h2 class="title"></h2>
+            <p></p>
+            <p></p>
+            <p></p>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="services">
         <div class="container">
-          <p>outra section</p>
+          <div class="grid">Services</div>
+        </div>
+      </section>
+      <section class="section" id="testimonials">
+        <div class="container">
+          <div class="grid">testimonials</div>
+        </div>
+      </section>
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="grid">
+            Contact
+            <a class="button" href="#">Agendar um horário</a>
+          </div>
         </div>
       </section>
     </main>
-    <a class="button" href="#">Agendar um horário</a>
+    <script src="./JS/main.js"></script>
   </body>
 </html>
