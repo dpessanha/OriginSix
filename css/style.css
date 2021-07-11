@@ -32,6 +32,8 @@ img {
   /* FONTS */
   --body-font: 400 1rem 'DM Sans', sans-serif;
   --title-font: 700 1.875rem 'Poppins', sans-serif;
+  --title-font-size: 1.5rem;
+  --subtitle-font-size: 1rem;
 }
 
 /* ======================= BASE */
@@ -99,11 +101,15 @@ body {
 }
 
 .section {
-  padding: 5rem 0;
+  padding: calc(5rem + var(--header-height)) 0;
 }
 
 .section .title {
   margin-bottom: 1rem;
+}
+
+section .subtitle {
+  font-size: var(--subtitle-font-size);
 }
 
 .section header {
@@ -140,14 +146,9 @@ body {
   transition: 0.3s;
 }
 
-main {
-  /* 16px = 1rem (baseado no tamanho da fonte da página, 16px) */
-  margin-top: calc(var(--header-height) + 2rem);
-}
-
 /* ======================= LOGO */
 .logo {
-  font: 700 1.31rem 'Poppins', sans-serif;
+  font: var(--title-font);
   color: var(--title-color);
 }
 
@@ -189,7 +190,8 @@ nav ul li a {
   position: relative;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
   color: var(--base-color);
 }
 
@@ -201,11 +203,16 @@ nav ul li a::after {
   background-color: var(--base-color);
   position: absolute;
   left: 0;
-  bottom: -1.5rem;
+  bottom: -0.5rem;
   transition: width 0.3s;
 }
 
-nav ul li a:hover::after {
+nav ul li a.active::after {
+  bottom: -0.5rem;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
   width: 100%;
 }
 
@@ -347,6 +354,10 @@ nav.show div.icon-close {
 }
 
 /* ======================= SERVICES */
+#services p {
+  text-align: justify;
+}
+
 .cards.grid {
   gap: 1.5rem;
 }
@@ -367,7 +378,7 @@ nav.show div.icon-close {
 }
 
 .card .title {
-  font-size: 1.5rem;
+  font-size: var(--title-font-size);
   margin-bottom: 0.75rem;
 }
 
@@ -470,6 +481,10 @@ footer {
   background: var(--base-color);
 }
 
+footer.section {
+  padding: 4rem 0;
+}
+
 footer .logo {
   display: inline-block;
   margin-bottom: 1.5rem;
@@ -527,6 +542,135 @@ footer .social a:hover {
     Medium devices:       767 >
     Small devices:        ?  */
 
-    @media(min-width: 992px){
-      
-    }
+@media (min-width: 1200px) {
+  .container {
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section {
+    padding: 10rem 0;
+  }
+
+  .section header,
+  #testimonials header {
+    max-width: 32rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .button {
+    height: 3.125rem;
+  }
+
+  /* NAVIGATION */
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+
+  nav .logo {
+    font: var(--title-font);
+  }
+
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav .menu ul li a.title {
+    font: 400 1rem var(--body-font);
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+  }
+
+  nav .menu ul li a.title.active {
+    font-weight: bold;
+    -webkit-font-smoothing: auto;
+    -moz-font-smoothing: auto;
+  }
+
+  nav .icon-menu {
+    display: none;
+  }
+
+  /* LAYOUT */
+  main {
+    /* 16px = 1rem (baseado no tamanho da fonte da página, 16px) */
+    margin-top: var(--header-height);
+  }
+
+  /* HOME */
+  #home .image {
+    order: 1;
+  }
+
+  #home .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    gap: 10rem;
+  }
+
+  #home .text {
+    order: 0;
+    max-width: 24rem;
+    text-align: left;
+  }
+
+  /* ABOUT */
+  #about .container {
+    grid-auto-flow: column;
+    margin: 0 auto;
+  }
+
+  /* SERVICES */
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card {
+    padding: 3rem;
+  }
+
+  /* TESTIMONIALS */
+  #testimonials .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* CONTACT */
+  #contact .container {
+    grid-auto-flow: column;
+    align-items: center;
+  }
+
+  #contact .text {
+    max-width: 25.25rem;
+  }
+
+  /* FOOTER */
+  footer.section {
+    padding: 3.75rem 0;
+  }
+
+  footer .container {
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  footer .logo {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 992px) {
+  :root {
+    --title-font-size: 2.25rem;
+    --subtitle-font-size: 1.125rem;
+  }
+}
