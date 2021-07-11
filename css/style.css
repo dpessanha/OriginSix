@@ -20,7 +20,7 @@ img {
 /* ======================= VARIABLES */
 :root {
   --header-height: 5rem;
-  --hue: 375;
+  --hue: 239;
   /* HSL color mode */
   --base-color: hsl(var(--hue) 36% 57%);
   --base-color-second: hsl(var(--hue) 65% 88%);
@@ -153,6 +153,10 @@ main {
 
 .logo span {
   color: var(--base-color-alt);
+}
+
+.logo-alt span {
+  color: var(--body-color);
 }
 
 /* ======================= NAVIGATION */
@@ -460,3 +464,69 @@ nav.show div.icon-close {
 #contact ul li i {
   color: var(--base-color);
 }
+
+/*====  FOOTER ============================ */
+footer {
+  background: var(--base-color);
+}
+
+footer .logo {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+footer .brand {
+  color: var(--text-color-light);
+}
+
+footer .brand p {
+  margin-bottom: 0.75rem;
+}
+
+footer i {
+  font-size: 1.5rem;
+  color: var(--text-color-light);
+}
+
+footer .social a {
+  margin-right: 2rem;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+footer .social a:hover {
+  transform: translateY(-0.3rem);
+}
+
+/*====  Back-To-Top ============================ */
+.back-to-top {
+  background: var(--base-color);
+  color: var(--text-color-light);
+  font-size: 1.5rem;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 0.3rem;
+  clip-path: circle();
+  transition: 0.3s;
+  transform: translateY(0);
+}
+
+.back-to-top.hidden {
+  transform: translateY(200%);
+}
+
+.back-to-top:hover {
+  font-size: 2.3rem;
+}
+
+/*====  Media Queries ============================ */
+/*  Extra large devices:  1200 >
+    Large devices:        1023 > 
+    Large devices:        992 >
+    Medium devices:       767 >
+    Small devices:        ?  */
+
+    @media(min-width: 992px){
+      
+    }
