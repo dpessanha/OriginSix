@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal@4"></script>
+
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <!-- STYLES -->
     <link rel="stylesheet" href="./css/style.css" />
 
@@ -25,7 +33,7 @@
   </head>
   <body>
     <header id="header" class="scroll">
-      <nav class="container show">
+      <nav class="container">
         <a class="logo" href="#">beauty<span>salon</span>.</a>
         <!-- menu -->
         <div class="menu">
@@ -43,6 +51,7 @@
       </nav>
     </header>
     <main>
+      <!-- HOME -->
       <section id="home" class="section">
         <div class="container grid">
           <div class="image">
@@ -62,6 +71,7 @@
       </section>
       <div class="divider-1"></div>
       <!-- EMMET= section.section#about>.container>.grid -->
+      <!-- ABOUT -->
       <section class="section" id="about">
         <div class="container grid">
           <div class="image">
@@ -96,6 +106,7 @@
         </div>
       </section>
       <div class="divider-2"></div>
+      <!-- SERVICES -->
       <section class="section" id="services">
         <div class="container">
           <div class="grid">
@@ -144,21 +155,100 @@
         </div>
       </section>
       <div class="divider-1"></div>
+      <!-- TESTIMONIALS -->
       <section class="section" id="testimonials">
         <div class="container">
-          <div class="grid">testimonials</div>
+          <header>
+            <h2 class="title">Depoimentos de quem já passou por aqui:</h2>
+          </header>
+          <div class="testimonials swiper-container">
+            <div class="swiper-wrapper">
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                    ut hic alias iusto?
+                  </p>
+                  <cite>
+                    <img
+                      src="./assets/pictures/WanessaSouza.jpg"
+                      alt="Depoimento de Wanessa Souza"
+                    />
+                    Wanessa Souza
+                  </cite>
+                </blockquote>
+              </div>
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                    ut hic alias iusto?
+                  </p>
+                  <cite>
+                    <img
+                      src="./assets/pictures/NoobSaibot.jpg"
+                      alt="Depoimento de Noob Saibot"
+                    />
+                    Noob Saibot
+                  </cite>
+                </blockquote>
+              </div>
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                    ut hic alias iusto?
+                  </p>
+                  <cite>
+                    <img
+                      src="./assets/pictures/CamandoCaia.jpg"
+                      alt="Depoimento de Camando Caia"
+                    />
+                    Camando Caia
+                  </cite>
+                </blockquote>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
       </section>
       <div class="divider-2"></div>
+      <!-- CONTACT -->
+      <!-- EMMET= section.section#about>.container.grid>.text>h2.title+p -->
+      <!-- CONTACT -->
       <section class="section" id="contact">
-        <div class="container">
-          <div class="grid">
-            Contact
-            <a class="button" href="#">Agendar um horário</a>
+        <div class="container grid">
+          <div class="text">
+            <h2 class="title">Entre em contato com a gente!</h2>
+            <p>
+              Entre em contato com a Beautysalon, queremos tirar suas dúvidas,
+              ouvir suas críticas e sugestões.
+            </p>
+            <a
+              href="https://api.whatsapp.com/send?phone=+5511998456754&text=Oi! Gostaria de agendar um horário"
+              class="button"
+              target="_blank"
+              ><i class="icon-whatsapp"></i> Entrar em contato</a
+            >
+          </div>
+          <div class="links">
+            <ul class="grid">
+              <li><i class="icon-phone"></i> 11 99845-6754</li>
+              <li><i class="icon-map-pin"></i> R. Amauri Souza, 346</li>
+              <li><i class="icon-mail"></i> contato@beautysalon.com</li>
+            </ul>
           </div>
         </div>
       </section>
     </main>
+    <!-- Swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- main.js -->
     <script src="./JS/main.js"></script>
   </body>
 </html>
